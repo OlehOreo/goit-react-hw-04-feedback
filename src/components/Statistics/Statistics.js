@@ -2,9 +2,7 @@ import { Notification } from 'components/Notification/Notification';
 import { StatInfo, Feedback } from './Statistics.styled';
 
 export const Statistics = ({
-  good,
-  neutral,
-  bad,
+  feedback: { good, neutral, bad },
   total,
   positivePercentage,
 }) => {
@@ -16,7 +14,7 @@ export const Statistics = ({
   return (
     <StatInfo>
       <span>
-        Good: <Feedback>{good}</Feedback>{' '}
+        Good: <Feedback>{good}</Feedback>
       </span>
       <span>
         Neutral: <Feedback>{neutral}</Feedback>
